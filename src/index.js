@@ -1,9 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+
 //oo
-const app = express();
+const app = require("./api");
 const port = 3000;
 
+
+=======
 
 app.use(bodyParser.json());
 
@@ -63,6 +64,7 @@ app.delete('/tasks/:id', (req, res) => {
   tasks = tasks.filter((t) => t.id !== taskId);
   res.sendStatus(204);
 });
+
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
